@@ -26,9 +26,11 @@ $ conda create -n biodatacr
 # Activación del ambiente
 $ conda activate biodatacr
 
-# Instalación de módulos
+# Configuración
 $ conda config --env --add channels conda-forge
 $ conda config --env --set channel_priority strict
+
+# Instalación de módulos
 $ conda install gdal
 
 # Desactivación del ambiente
