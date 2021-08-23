@@ -12,6 +12,15 @@ $ ogr2ogr \
     -makevalid \
     provincias.shp \
     WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limiteprovincial_5k"
+    
+# Cantones
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -nln cantones \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    cantones.shp \
+    WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitecantonal_5k"    
 ```  
 
 ## Creación del ambiente Conda
