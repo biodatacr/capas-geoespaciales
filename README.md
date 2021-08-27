@@ -165,19 +165,27 @@ $ conda deactivate
   <tr>
     <th>Archivo</th>
     <th>Nombre</th>
+    <th>Id</th>      
     <th>Tipo</th>      
     <th>Dominio</th>
     <th>Clasificación 1</th>
     <th>Clasificación 2</th>
-    <th>Id</th>
+    <th>Nombre Campo</th>
+    <th>Id Campo</th>
+    <th>Source Id</th>
+    <th>Source description</th>
   </tr>
   <tr>
     <td>provincias.shp</td>
     <td>provincias</td>
+    <td>10000</td>      
     <td>Contextual</td>
     <td>Terrestrial</td>
     <td>territorial</td>
     <td>administrativa</td>
-    <td>10000</td>
+    <td>provincias</td>
+    <td>cl10000</td>
+    <td>provincia</td>
+    <td>provincia</td>
   </tr>
 <table>
