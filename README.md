@@ -113,9 +113,22 @@ $ unzip wc2.1_30s_bio.zip wc2.1_30s_bio_1.tif
 $ unzip wc2.1_30s_bio.zip wc2.1_30s_bio_12.tif
 
 # Temperatura media anual
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_1.tif \
+    temperatura_media_anual.bil
 
 # Precipitación anual
-
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_12.tif \
+    precipitacion_anual.bil
 
 # Desactivación del ambiente conda
 $ conda deactivate
