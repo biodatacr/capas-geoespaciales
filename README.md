@@ -166,8 +166,6 @@ $ conda deactivate
     <th>Archivo</th>
     <th>Nombre</th>
     <th>Id</th>      
-    <th>Tipo</th>      
-    <th>Dominio</th>
     <th>Clasificación 1</th>
     <th>Clasificación 2</th>
     <th>Nombre Campo</th>
@@ -179,8 +177,6 @@ $ conda deactivate
     <td>provincias.shp</td>
     <td>provincias</td>
     <td>10000</td>      
-    <td>Contextual</td>
-    <td>Terrestrial</td>
     <td>territorial</td>
     <td>administrativa</td>
     <td>provincias</td>
