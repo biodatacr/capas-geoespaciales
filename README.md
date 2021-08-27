@@ -4,6 +4,11 @@
 # Se utiliza el ambiente conda creado como se muestra en la siguiente sección
 $ conda activate biodatacr
 
+
+#
+# División territorial administrativa
+#
+
 # Provincias
 $ rm provincias.*
 $ ogr2ogr \
@@ -37,6 +42,11 @@ $ ogr2ogr \
     WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitedistrital_5k"
 $ zip -m distritos.zip distritos.*
 
+
+#
+# División territorial de conservación
+#
+
 # Áreas silvestres protegidas
 $ rm areas_silvestres_protegidas.*
 $ ogr2ogr \
@@ -59,6 +69,11 @@ $ ogr2ogr \
     WFS:"http://geos1pne.sirefor.go.cr/wfs" "PNE:areas_conservacion"
 $ zip -m areas_conservacion.zip areas_conservacion.*
 
+
+#
+# Cuencas hidrográficas
+#
+
 # Cuencas hidrográficas
 $ rm cuencas_hidrograficas.*
 $ ogr2ogr \
@@ -69,6 +84,11 @@ $ ogr2ogr \
     cuencas_hidrograficas.shp \
     WFS:"http://18.218.14.134:8080/geoserver/CENIGA/wfs" "CENIGA:cuencas_hidrograficas_50k"
 $ zip -m cuencas_hidrograficas.zip cuencas_hidrograficas.*
+
+
+#
+# Zonas de vida de Holdridge
+#
 
 # Zonas de vida de Holdridge
 $ rm zonas_vida_holdridge.*
@@ -81,8 +101,21 @@ $ ogr2ogr \
     WFS:"http://18.218.14.134:8080/geoserver/CENIGA/wfs" "CENIGA:zonas_de_vida_08"
 $ zip -m zonas_vida_holdridge.zip zonas_vida_holdridge.*
 
+
+#
 # WorldClim
+#
+
+# Descarga y descompresión
 $ wget https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_30s_bio.zip
+$ unzip -l wc2.1_30s_bio.zip
+$ unzip wc2.1_30s_bio.zip bio1.
+$ unzip wc2.1_30s_bio.zip bio12.
+
+# Temperatura media anual
+
+# Precipitación anual
+
 
 # Desactivación del ambiente conda
 $ conda deactivate
