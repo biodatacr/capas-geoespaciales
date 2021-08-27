@@ -120,6 +120,7 @@ $ gdalwarp \
     -cutline provincias.shp \
     -crop_to_cutline wc2.1_30s_bio_1.tif \
     temperatura_media_anual.bil
+$ zip -m temperatura_media_anual.zip temperatura_media_anual.*
 
 # Precipitación anual
 $ gdalwarp \
@@ -129,6 +130,7 @@ $ gdalwarp \
     -cutline provincias.shp \
     -crop_to_cutline wc2.1_30s_bio_12.tif \
     precipitacion_anual.bil
+$ zip -m precipitacion_anual.zip precipitacion_anual.*
 
 # Desactivación del ambiente conda
 $ conda deactivate
