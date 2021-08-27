@@ -184,4 +184,15 @@ $ conda deactivate
     <td>provincia</td>
     <td>provincia</td>
   </tr>
+  <tr>
+    <td>cantones.shp</td>
+    <td>cantones</td>
+    <td>10001</td>      
+    <td>territorial</td>
+    <td>administrativa</td>
+    <td>cantones</td>
+    <td>cl10001</td>
+    <td>canton</td>
+    <td>canton</td>
+  </tr>    
 <table>
