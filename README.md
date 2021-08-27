@@ -81,6 +81,9 @@ $ ogr2ogr \
     WFS:"http://18.218.14.134:8080/geoserver/CENIGA/wfs" "CENIGA:zonas_de_vida_08"
 $ zip -m zonas_vida_holdridge.zip zonas_vida_holdridge.*
 
+# WorldClim
+$ wget https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_30s_bio.zip
+
 # Desactivación del ambiente conda
 $ conda deactivate
 ```  
