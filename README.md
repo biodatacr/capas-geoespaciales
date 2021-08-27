@@ -14,7 +14,7 @@ $ ogr2ogr \
     provincias.shp \
     WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limiteprovincial_5k"
 $ zip -m provincias.zip provincias.*
-    
+
 # Cantones
 $ rm cantones.*
 $ ogr2ogr \
@@ -23,8 +23,8 @@ $ ogr2ogr \
     -t_srs EPSG:4326 \
     -makevalid \
     cantones.shp \
-    WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitecantonal_5k"    
-$ zip -m cantones.zip cantones.*    
+    WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitecantonal_5k"
+$ zip -m cantones.zip cantones.*
 
 # Distritos
 $ rm distritos.*
@@ -34,9 +34,31 @@ $ ogr2ogr \
     -t_srs EPSG:4326 \
     -makevalid \
     distritos.shp \
-    WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitedistrital_5k"    
-$ zip -m distritos.zip distritos.*    
-    
+    WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitedistrital_5k"
+$ zip -m distritos.zip distritos.*
+
+# Áreas Silvestres Protegidas
+$ rm areas_silvestres_protegidas.*
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -nln areas_silvestres_protegidas \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    areas_silvestres_protegidas.shp \
+    WFS:"http://geos1pne.sirefor.go.cr/wfs" "PNE:areas_silvestres_protegidas"
+$ zip -m areas_silvestres_protegidas.zip areas_silvestres_protegidas.*
+
+# Áreas de Conservación
+$ rm areas_conservacion.*
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -nln areas_conservacion \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    areas_conservacion.shp \
+    WFS:"http://geos1pne.sirefor.go.cr/wfs" "PNE:areas_conservacion"
+$ zip -m areas_conservacion.zip areas_conservacion.*
+
 # Desactivación del ambiente conda
 $ conda deactivate
 ```  
