@@ -109,8 +109,8 @@ $ zip -m zonas_vida_holdridge.zip zonas_vida_holdridge.*
 # Descarga y descompresión
 $ wget https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_30s_bio.zip
 $ unzip -l wc2.1_30s_bio.zip
-$ unzip wc2.1_30s_bio.zip bio1.
-$ unzip wc2.1_30s_bio.zip bio12.
+$ unzip wc2.1_30s_bio.zip wc2.1_30s_bio_1.tif
+$ unzip wc2.1_30s_bio.zip wc2.1_30s_bio_12.tif
 
 # Temperatura media anual
 
