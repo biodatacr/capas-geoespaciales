@@ -1,4 +1,27 @@
-## Capas geoespaciales
+## Creación de ambiente Conda
+
+```shell
+# Actualización de Conda
+$ conda update -n base -c defaults conda
+
+# Creación del ambiente
+$ conda create -n biodatacr
+
+# Activación del ambiente
+$ conda activate biodatacr
+
+# Configuración
+$ conda config --env --add channels conda-forge
+$ conda config --env --set channel_priority strict
+
+# Instalación de módulos
+$ conda install gdal
+
+# Desactivación del ambiente
+$ conda deactivate
+```
+
+## Descarga de capas geoespaciales
 
 ```shell
 # Se utiliza el ambiente conda creado como se muestra en la siguiente sección
@@ -136,25 +159,17 @@ $ zip -m precipitacion_anual.zip precipitacion_anual.*
 $ conda deactivate
 ```  
 
-## Creación del ambiente Conda
+## Propiedades de las capas
 
-```shell
-# Actualización de Conda
-$ conda update -n base -c defaults conda
-
-# Creación del ambiente
-$ conda create -n biodatacr
-
-# Activación del ambiente
-$ conda activate biodatacr
-
-# Configuración
-$ conda config --env --add channels conda-forge
-$ conda config --env --set channel_priority strict
-
-# Instalación de módulos
-$ conda install gdal
-
-# Desactivación del ambiente
-$ conda deactivate
-```
+<table>
+  <tr>
+    <th>Archivo</th>
+    <th>Nombre</th>
+    <th>Dominio</th>
+  </tr>
+  <tr>
+    <td>provincias.shp</td>
+    <td>provincias</td>
+    <td>Terrestrial</td>
+  </tr>
+<table>
