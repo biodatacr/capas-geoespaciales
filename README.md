@@ -37,7 +37,7 @@ $ ogr2ogr \
     WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitedistrital_5k"
 $ zip -m distritos.zip distritos.*
 
-# Áreas Silvestres Protegidas
+# Áreas silvestres protegidas
 $ rm areas_silvestres_protegidas.*
 $ ogr2ogr \
     -lco ENCODING=ISO-8859-1 \
@@ -48,7 +48,7 @@ $ ogr2ogr \
     WFS:"http://geos1pne.sirefor.go.cr/wfs" "PNE:areas_silvestres_protegidas"
 $ zip -m areas_silvestres_protegidas.zip areas_silvestres_protegidas.*
 
-# Áreas de Conservación
+# Áreas de conservación
 $ rm areas_conservacion.*
 $ ogr2ogr \
     -lco ENCODING=ISO-8859-1 \
@@ -58,6 +58,28 @@ $ ogr2ogr \
     areas_conservacion.shp \
     WFS:"http://geos1pne.sirefor.go.cr/wfs" "PNE:areas_conservacion"
 $ zip -m areas_conservacion.zip areas_conservacion.*
+
+# Cuencas hidrográficas
+$ rm cuencas_hidrograficas.*
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -nln cuencas_hidrograficas \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    cuencas_hidrograficas.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/CENIGA/wfs" "CENIGA:cuencas_hidrograficas_50k"
+$ zip -m cuencas_hidrograficas.zip cuencas_hidrograficas.*
+
+# Zonas de vida de Holdridge
+$ rm zonas_vida_holdridge.*
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -nln zonas_vida_holdridge \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    zonas_vida_holdridge.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/CENIGA/wfs" "CENIGA:zonas_de_vida_08"
+$ zip -m zonas_vida_holdridge.zip zonas_vida_holdridge.*
 
 # Desactivación del ambiente conda
 $ conda deactivate
