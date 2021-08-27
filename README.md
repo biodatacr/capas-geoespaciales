@@ -5,6 +5,7 @@
 $ conda activate biodatacr
 
 # Provincias
+$ rm provincias.*
 $ ogr2ogr \
     -lco ENCODING=ISO-8859-1 \
     -nln provincias \
@@ -12,8 +13,10 @@ $ ogr2ogr \
     -makevalid \
     provincias.shp \
     WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limiteprovincial_5k"
+$ zip -m provincias.zip provincias.*
     
 # Cantones
+$ rm cantones.*
 $ ogr2ogr \
     -lco ENCODING=ISO-8859-1 \
     -nln cantones \
@@ -21,6 +24,21 @@ $ ogr2ogr \
     -makevalid \
     cantones.shp \
     WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitecantonal_5k"    
+$ zip -m cantones.zip cantones.*    
+
+# Distritos
+$ rm distritos.*
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -nln distritos \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    distritos.shp \
+    WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitedistrital_5k"    
+$ zip -m distritos.zip distritos.*    
+    
+# Desactivación del ambiente conda
+$ conda deactivate
 ```  
 
 ## Creación del ambiente Conda
