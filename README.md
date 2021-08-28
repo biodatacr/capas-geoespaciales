@@ -205,5 +205,16 @@ $ conda deactivate
     <td>cl10002</td>
     <td>distrito</td>
     <td>distrito</td>
-  </tr>    
+  </tr>
+  <tr>
+    <td>temperatura_media_anual.shp</td>
+    <td>temperatura_media_anual</td>
+    <td>10003</td>      
+    <td>clima</td>
+    <td>temperatura</td>
+    <td>temperatura_media_anual</td>
+    <td>el10003</td>
+    <td>temperatura_media_anual</td>
+    <td>temperatura_media_anual</td>
+  </tr>
 <table>
