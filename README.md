@@ -194,5 +194,16 @@ $ conda deactivate
     <td>cl10001</td>
     <td>canton</td>
     <td>canton</td>
+  </tr>
+  <tr>
+    <td>distritos.shp</td>
+    <td>distritos</td>
+    <td>10002</td>      
+    <td>territorial</td>
+    <td>administrativa</td>
+    <td>distritos</td>
+    <td>cl10002</td>
+    <td>distrito</td>
+    <td>distrito</td>
   </tr>    
 <table>
