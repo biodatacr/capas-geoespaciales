@@ -238,5 +238,16 @@ $ conda deactivate
     <td>cl10005</td>
     <td>nombre_ac</td>
     <td>nombre_ac</td>
+  </tr>
+  <tr>
+    <td>areas_silvestres_protegidas.shp</td>
+    <td>areas_silvestres_protegidas</td>
+    <td>10006</td>      
+    <td>territorial</td>
+    <td>administrativa</td>
+    <td>areas_silvestres_protegidas</td>
+    <td>cl10006</td>
+    <td>nombre_asp</td>
+    <td>nombre_asp</td>
   </tr>    
 <table>
