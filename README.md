@@ -228,4 +228,15 @@ $ conda deactivate
     <td>precipitacion_anual</td>
     <td>precipitacion_anual</td>
   </tr>
+  <tr>
+    <td>areas_conservacion.shp</td>
+    <td>areas_conservacion</td>
+    <td>10005</td>      
+    <td>territorial</td>
+    <td>administrativa</td>
+    <td>areas_conservacion</td>
+    <td>cl10005</td>
+    <td>areas_conservacion</td>
+    <td>areas_conservacion</td>
+  </tr>    
 <table>
