@@ -261,4 +261,15 @@ $ conda deactivate
     <td>nombre</td>
     <td>nombre</td>
   </tr>
+  <tr>
+    <td>zonas_vida_holdridge.shp</td>
+    <td>zonas_vida_holdridge</td>
+    <td>10008</td>      
+    <td>bioclimatica</td>
+    <td>vegetacion</td>
+    <td>zonas_vida_holdridge</td>
+    <td>cl10008</td>
+    <td>nombre</td>
+    <td>nombre</td>
+  </tr>
 <table>
