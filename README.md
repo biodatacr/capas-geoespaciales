@@ -233,7 +233,7 @@ $ conda deactivate
     <td>areas_conservacion</td>
     <td>10005</td>      
     <td>territorial</td>
-    <td>administrativa</td>
+    <td>conservacion</td>
     <td>areas_conservacion</td>
     <td>cl10005</td>
     <td>nombre_ac</td>
@@ -244,10 +244,21 @@ $ conda deactivate
     <td>areas_silvestres_protegidas</td>
     <td>10006</td>      
     <td>territorial</td>
-    <td>administrativa</td>
+    <td>conservacion</td>
     <td>areas_silvestres_protegidas</td>
     <td>cl10006</td>
     <td>nombre_asp</td>
     <td>nombre_asp</td>
-  </tr>    
+  </tr>
+  <tr>
+    <td>cuencas_hidrograficas.shp</td>
+    <td>cuencas_hidrograficas</td>
+    <td>10007</td>      
+    <td>territorial</td>
+    <td>hidrografica</td>
+    <td>cuencas_hidrograficas</td>
+    <td>cl10007</td>
+    <td>nombre</td>
+    <td>nombre</td>
+  </tr>
 <table>
