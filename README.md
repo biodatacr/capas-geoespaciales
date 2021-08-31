@@ -236,7 +236,7 @@ $ conda deactivate
     <td>administrativa</td>
     <td>areas_conservacion</td>
     <td>cl10005</td>
-    <td>areas_conservacion</td>
-    <td>areas_conservacion</td>
+    <td>nombre_ac</td>
+    <td>nombre_ac</td>
   </tr>    
 <table>
