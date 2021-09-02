@@ -338,7 +338,7 @@ $ conda deactivate
     <td>temperatura</td>
     <td>temperatura_media_1960_2013</td>
     <td>cl10011</td>
-    <td>TEMPERATUR</td>
-    <td>TEMPERATUR</td>
+    <td>RANGO_TEMP</td>
+    <td>RANGO_TEMP</td>
   </tr>    
 <table>
