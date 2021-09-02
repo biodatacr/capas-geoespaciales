@@ -92,6 +92,16 @@ $ ogr2ogr \
     WFS:"http://geos1pne.sirefor.go.cr/wfs" "PNE:areas_conservacion"
 $ zip -m areas_conservacion.zip areas_conservacion.*
 
+# Corredores biológicos
+$ rm corredores_biologicos.*
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -nln corredores_biologicos \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    corredores_biologicos.shp \
+    WFS:"http://geos1pne.sirefor.go.cr/wfs" "PNE:corredoresbiologicos"
+$ zip -m corredores_biologicos.zip corredores_biologicos.*
 
 #
 # Cuencas hidrográficas
@@ -271,5 +281,16 @@ $ conda deactivate
     <td>cl10008</td>
     <td>nombre</td>
     <td>nombre</td>
+  </tr>
+  <tr>
+    <td>corredores_biologicos.shp</td>
+    <td>corredores_biologicos</td>
+    <td>10010</td>      
+    <td>territorial</td>
+    <td>conservacion</td>
+    <td>territorial</td>
+    <td>cl10010</td>
+    <td>nombre_cb</td>
+    <td>nombre_cb</td>
   </tr>
 <table>
