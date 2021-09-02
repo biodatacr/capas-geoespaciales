@@ -136,6 +136,22 @@ $ zip -m zonas_vida_holdridge.zip zonas_vida_holdridge.*
 
 
 #
+# Clima
+#
+
+# Regiones climáticas
+$ rm regiones_climaticas.*
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -nln regiones_climaticas \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    regiones_climaticas.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:reg_climaticas_imn"
+$ zip -m regiones_climaticas.zip regiones_climaticas.*
+
+
+#
 # WorldClim
 #
 
@@ -288,9 +304,20 @@ $ conda deactivate
     <td>10009</td>      
     <td>territorial</td>
     <td>conservacion</td>
-    <td>territorial</td>
+    <td>corredores_biologicos</td>
     <td>cl10009</td>
     <td>nombre_cb</td>
     <td>nombre_cb</td>
+  </tr>
+  <tr>
+    <td>regiones_climaticas.shp</td>
+    <td>regiones_climaticas</td>
+    <td>10010</td>      
+    <td>territorial</td>
+    <td>conservacion</td>
+    <td>regiones_climaticas</td>
+    <td>cl10010</td>
+    <td>REGION</td>
+    <td>REGION</td>
   </tr>
 <table>
