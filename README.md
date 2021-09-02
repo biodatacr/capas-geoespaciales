@@ -150,16 +150,16 @@ $ ogr2ogr \
     WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:reg_climaticas_imn"
 $ zip -m regiones_climaticas.zip regiones_climaticas.*
 
-# Temperatura media anual 1960-2013
-$ rm temperatura_media_anual_1960_2013.*
+# Temperatura media 1960-2013
+$ rm temperatura_media_1960_2013.*
 $ ogr2ogr \
     -lco ENCODING=ISO-8859-1 \
-    -nln temperatura_media_anual_1960_2013 \
+    -nln temperatura_media_1960_2013 \
     -t_srs EPSG:4326 \
     -makevalid \
-    temperatura_media_anual_1960_2013.shp \
+    temperatura_media_1960_2013.shp \
     WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:reg_climaticas_imn"
-$ zip -m temperatura_media_anual_1960_2013.zip temperatura_media_anual_1960_2013.*
+$ zip -m temperatura_media_1960_2013.zip temperatura_media_1960_2013.*
 
 #
 # WorldClim
@@ -331,12 +331,12 @@ $ conda deactivate
     <td>REGION</td>
   </tr>
   <tr>
-    <td>temperatura_media_anual_1960_2013.shp</td>
-    <td>temperatura_media_anual_1960_2013</td>
+    <td>temperatura_media_1960_2013.shp</td>
+    <td>temperatura_media_1960_2013</td>
     <td>10011</td>      
     <td>climatica</td>
     <td>temperatura</td>
-    <td>temperatura_media_anual_1960_2013</td>
+    <td>temperatura_media_1960_2013</td>
     <td>cl10011</td>
     <td>TEMPERATUR</td>
     <td>TEMPERATUR</td>
