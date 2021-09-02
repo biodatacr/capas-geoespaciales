@@ -161,6 +161,17 @@ $ ogr2ogr \
     WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:Tem_media_CR_60_13"
 $ zip -m temperatura_media_1960_2013.zip temperatura_media_1960_2013.*
 
+# Temperatura mínima 1960-2013
+$ rm temperatura_minima_1960_2013.*
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -nln temperatura_minima_1960_2013 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    temperatura_minima_1960_2013.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:Tem_min_CR_60_13"
+$ zip -m temperatura_minima_1960_2013.zip temperatura_minima_1960_2013.*
+
 #
 # WorldClim
 #
@@ -340,5 +351,16 @@ $ conda deactivate
     <td>cl10011</td>
     <td>RANGO_TEMP</td>
     <td>RANGO_TEMP</td>
-  </tr>    
+  </tr>
+  <tr>
+    <td>temperatura_minima_1960_2013.shp</td>
+    <td>temperatura_minima_1960_2013</td>
+    <td>10012</td>
+    <td>climatica</td>
+    <td>temperatura</td>
+    <td>temperatura_minima_1960_2013</td>
+    <td>cl10012</td>
+    <td>RANGO_TEMP</td>
+    <td>RANGO_TEMP</td>
+  </tr>
 <table>
