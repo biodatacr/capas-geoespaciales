@@ -285,11 +285,11 @@ $ conda deactivate
   <tr>
     <td>corredores_biologicos.shp</td>
     <td>corredores_biologicos</td>
-    <td>10010</td>      
+    <td>10009</td>      
     <td>territorial</td>
     <td>conservacion</td>
     <td>territorial</td>
-    <td>cl10010</td>
+    <td>cl10009</td>
     <td>nombre_cb</td>
     <td>nombre_cb</td>
   </tr>
