@@ -150,6 +150,16 @@ $ ogr2ogr \
     WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:reg_climaticas_imn"
 $ zip -m regiones_climaticas.zip regiones_climaticas.*
 
+# Temperatura media anual 1960-2013
+$ rm temperatura_media_anual_1960_2013.*
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -nln temperatura_media_anual_1960_2013 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    temperatura_media_anual_1960_2013.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:reg_climaticas_imn"
+$ zip -m temperatura_media_anual_1960_2013.zip temperatura_media_anual_1960_2013.*
 
 #
 # WorldClim
@@ -168,8 +178,8 @@ $ gdalwarp \
     -q \
     -cutline provincias.shp \
     -crop_to_cutline wc2.1_30s_bio_1.tif \
-    temperatura_media_anual.bil
-$ zip -m temperatura_media_anual.zip temperatura_media_anual.*
+    temperatura_media_anual_1970_2000.bil
+$ zip -m temperatura_media_anual_1970_2000.zip temperatura_media_anual_1970_2000.*
 
 # Precipitación anual
 $ gdalwarp \
@@ -178,8 +188,8 @@ $ gdalwarp \
     -q \
     -cutline provincias.shp \
     -crop_to_cutline wc2.1_30s_bio_12.tif \
-    precipitacion_anual.bil
-$ zip -m precipitacion_anual.zip precipitacion_anual.*
+    precipitacion_anual_1970_2000.bil
+$ zip -m precipitacion_anual_1970_2000.zip precipitacion_anual_1970_2000.*
 
 # Desactivación del ambiente conda
 $ conda deactivate
@@ -233,26 +243,26 @@ $ conda deactivate
     <td>distrito</td>
   </tr>
   <tr>
-    <td>temperatura_media_anual.shp</td>
-    <td>temperatura_media_anual</td>
+    <td>temperatura_media_anual_1970_2000.shp</td>
+    <td>temperatura_media_anual_1970_2000</td>
     <td>10003</td>      
     <td>climatica</td>
     <td>temperatura</td>
-    <td>temperatura_media_anual</td>
+    <td>temperatura_media_anual_1970_2000</td>
     <td>el10003</td>
-    <td>temperatura_media_anual</td>
-    <td>temperatura_media_anual</td>
+    <td>temperatura_media_anual_1970_2000</td>
+    <td>temperatura_media_anual_1970_2000</td>
   </tr>
   <tr>
-    <td>precipitacion_anual.shp</td>
-    <td>precipitacion_anual</td>
+    <td>precipitacion_anual_1970_2000.shp</td>
+    <td>precipitacion_anual_1970_2000</td>
     <td>10004</td>      
     <td>climatica</td>
     <td>precipitacion</td>
-    <td>precipitacion_anual</td>
+    <td>precipitacion_anual_1970_2000</td>
     <td>el10004</td>
-    <td>precipitacion_anual</td>
-    <td>precipitacion_anual</td>
+    <td>precipitacion_anual_1970_2000</td>
+    <td>precipitacion_anual_1970_2000</td>
   </tr>
   <tr>
     <td>areas_conservacion.shp</td>
@@ -320,4 +330,15 @@ $ conda deactivate
     <td>REGION</td>
     <td>REGION</td>
   </tr>
+  <tr>
+    <td>temperatura_media_anual_1960_2013.shp</td>
+    <td>temperatura_media_anual_1960_2013</td>
+    <td>10011</td>      
+    <td>climatica</td>
+    <td>temperatura</td>
+    <td>temperatura_media_anual_1960_2013</td>
+    <td>cl10011</td>
+    <td>TEMPERATUR</td>
+    <td>TEMPERATUR</td>
+  </tr>    
 <table>
