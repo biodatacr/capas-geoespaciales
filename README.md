@@ -158,7 +158,7 @@ $ ogr2ogr \
     -t_srs EPSG:4326 \
     -makevalid \
     temperatura_media_1960_2013.shp \
-    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:reg_climaticas_imn"
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:Tem_media_CR_60_13"
 $ zip -m temperatura_media_1960_2013.zip temperatura_media_1960_2013.*
 
 #
