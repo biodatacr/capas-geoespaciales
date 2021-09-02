@@ -236,7 +236,7 @@ $ conda deactivate
     <td>temperatura_media_anual.shp</td>
     <td>temperatura_media_anual</td>
     <td>10003</td>      
-    <td>clima</td>
+    <td>climatica</td>
     <td>temperatura</td>
     <td>temperatura_media_anual</td>
     <td>el10003</td>
@@ -247,7 +247,7 @@ $ conda deactivate
     <td>precipitacion_anual.shp</td>
     <td>precipitacion_anual</td>
     <td>10004</td>      
-    <td>clima</td>
+    <td>climatica</td>
     <td>precipitacion</td>
     <td>precipitacion_anual</td>
     <td>el10004</td>
