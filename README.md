@@ -279,7 +279,7 @@ $ conda deactivate
     <td>temperatura_media_anual_1970_2000.shp</td>
     <td>temperatura_media_anual_1970_2000</td>
     <td>10003</td>      
-    <td>climatica</td>
+    <td>bioclimatica</td>
     <td>temperatura</td>
     <td>temperatura_media_anual_1970_2000</td>
     <td>el10003</td>
@@ -290,7 +290,7 @@ $ conda deactivate
     <td>precipitacion_anual_1970_2000.shp</td>
     <td>precipitacion_anual_1970_2000</td>
     <td>10004</td>      
-    <td>climatica</td>
+    <td>bioclimatica</td>
     <td>precipitacion</td>
     <td>precipitacion_anual_1970_2000</td>
     <td>el10004</td>
@@ -367,7 +367,7 @@ $ conda deactivate
     <td>temperatura_media_1960_2013.shp</td>
     <td>temperatura_media_1960_2013</td>
     <td>10011</td>      
-    <td>climatica</td>
+    <td>bioclimatica</td>
     <td>temperatura</td>
     <td>temperatura_media_1960_2013</td>
     <td>cl10011</td>
@@ -378,7 +378,7 @@ $ conda deactivate
     <td>temperatura_minima_1960_2013.shp</td>
     <td>temperatura_minima_1960_2013</td>
     <td>10012</td>
-    <td>climatica</td>
+    <td>bioclimatica</td>
     <td>temperatura</td>
     <td>temperatura_minima_1960_2013</td>
     <td>cl10012</td>
@@ -389,7 +389,7 @@ $ conda deactivate
     <td>temperatura_maxima_1960_2013.shp</td>
     <td>temperatura_maxima_1960_2013</td>
     <td>10013</td>
-    <td>climatica</td>
+    <td>bioclimatica</td>
     <td>temperatura</td>
     <td>temperatura_maxima_1960_2013</td>
     <td>cl10013</td>
@@ -400,7 +400,7 @@ $ conda deactivate
     <td>precipitacion_anual_1960_2013.shp</td>
     <td>precipitacion_anual_1960_2013</td>
     <td>10014</td>
-    <td>climatica</td>
+    <td>bioclimatica</td>
     <td>precipitacion</td>
     <td>precipitacion_anual_1960_2013</td>
     <td>cl10014</td>
