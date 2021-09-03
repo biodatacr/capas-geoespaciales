@@ -194,6 +194,17 @@ $ ogr2ogr \
     WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:anual_pre_60_13"
 $ zip -m precipitacion_anual_1960_2013.zip precipitacion_anual_1960_2013.*
 
+# Brillo solar 2004
+$ rm brillo_solar_2004.*
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -nln brillo_solar_2004 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    brillo_solar_2004.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:brillo_solar_anual_2004"
+$ zip -m brillo_solar_2004.zip brillo_solar_2004.*
+
 #
 # WorldClim
 #
@@ -406,5 +417,16 @@ $ conda deactivate
     <td>cl10014</td>
     <td>RANGO_PREC</td>
     <td>RANGO_PREC</td>
+  </tr>
+  <tr>
+    <td>brillo_solar_2004.shp</td>
+    <td>brillo_solar_2004</td>
+    <td>10015</td>
+    <td>bioclimatica</td>
+    <td>brillo_solar</td>
+    <td>brillo_solar_2004</td>
+    <td>cl10015</td>
+    <td>VALOR_1</td>
+    <td>VALOR_1</td>
   </tr>
 <table>
