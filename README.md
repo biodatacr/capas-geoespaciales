@@ -357,7 +357,7 @@ $ conda deactivate
     <td>regiones_climaticas</td>
     <td>10010</td>      
     <td>territorial</td>
-    <td>climatica</td>
+    <td>bioclimatica</td>
     <td>regiones_climaticas</td>
     <td>cl10010</td>
     <td>REGION</td>
