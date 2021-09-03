@@ -209,12 +209,12 @@ $ zip -m brillo_solar_2004.zip brillo_solar_2004.*
 $ rm evapotranspiracion_media_2004.*
 $ ogr2ogr \
     -lco ENCODING=ISO-8859-1 \
-    -nln evapotranspiracion_media \
+    -nln evapotranspiracion_media_2004 \
     -t_srs EPSG:4326 \
     -makevalid \
-    evapotranspiracion_media.shp \
+    evapotranspiracion_media_2004.shp \
     WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:Evapotranspiración_Media_Anual_Costa_Rica_2004"
-$ zip -m evapotranspiracion_media.zip evapotranspiracion_media.*
+$ zip -m evapotranspiracion_media_2004.zip evapotranspiracion_media_2004.*
 
 
 #
