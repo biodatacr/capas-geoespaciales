@@ -205,6 +205,18 @@ $ ogr2ogr \
     WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:brillo_solar_anual_2004"
 $ zip -m brillo_solar_2004.zip brillo_solar_2004.*
 
+# Evapotranspiración media 2004
+$ rm evapotranspiracion_media_2004.*
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -nln evapotranspiracion_media \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    evapotranspiracion_media.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:Evapotranspiración_Media_Anual_Costa_Rica_2004"
+$ zip -m evapotranspiracion_media.zip evapotranspiracion_media.*
+
+
 #
 # WorldClim
 #
@@ -428,5 +440,16 @@ $ conda deactivate
     <td>cl10015</td>
     <td>VALOR_1</td>
     <td>VALOR_1</td>
+  </tr>
+  <tr>
+    <td>evapotranspiracion_media_2004.shp</td>
+    <td>evapotranspiracion_media_2004</td>
+    <td>10016</td>
+    <td>bioclimatica</td>
+    <td>evapotranspiracion</td>
+    <td>evapotranspiracion_media_2004</td>
+    <td>cl10016</td>
+    <td>POLIGONO</td>
+    <td>POLIGONO</td>
   </tr>
 <table>
