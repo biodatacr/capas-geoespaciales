@@ -183,7 +183,14 @@ Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con l
     <td>bioclimatica</td>
     <td>temperatura</td>
     <td>el10039</td>
-  </tr>  
+  </tr>
+  <tr>
+    <td>bio06_temperatura_minima_mes_friisimo_1970_2000</td>
+    <td>10040</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>el10040</td>
+  </tr>
 <table>
 
 ## Creación de ambiente Conda
@@ -489,6 +496,16 @@ $ gdalwarp \
     -crop_to_cutline wc2.1_30s_bio_5.tif \
     bio05_temperatura_maxima_mes_calientisimo_1970_2000.bil
 $ zip -m bio05_temperatura_maxima_mes_calientisimo_1970_2000.zip bio05_temperatura_maxima_mes_calientisimo_1970_2000.*
+
+# BIO06 Temperatura mínima del mes más frío
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_6.tif \
+    bio06_temperatura_minima_mes_friisimo_1970_2000.bil
+$ zip -m bio06_temperatura_minima_mes_friisimo_1970_2000.zip bio06_temperatura_minima_mes_friisimo_1970_2000.*
 
   
 # Desactivación del ambiente conda
