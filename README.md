@@ -43,7 +43,6 @@ $ ogr2ogr \
     WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limiteprovincial_5k"
 $ zip -m provincias.zip provincias.*
 
-
 # Cantones
 $ rm cantones.*
 $ ogr2ogr \
@@ -54,8 +53,6 @@ $ ogr2ogr \
     cantones.shp \
     WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitecantonal_5k"
 $ zip -m cantones.zip cantones.*
-
-
 # Cantones 2 (se usó este método porque estaba fallando la capa en el SNIT. El archivo cantones.geojson se obtuvo a partir de una versión descargada previamente)
 $ ogr2ogr \
     -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(canton,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, geometry FROM cantones" \
@@ -67,7 +64,6 @@ $ ogr2ogr \
 $ rm cantones.geojson
 $ zip -m cantones.zip cantones.*
 
-
 # Distritos
 $ rm distritos.*
 $ ogr2ogr \
@@ -78,6 +74,7 @@ $ ogr2ogr \
     distritos.shp \
     WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitedistrital_5k"
 $ zip -m distritos.zip distritos.*
+
 
 # Desactivación del ambiente conda
 $ conda deactivate
