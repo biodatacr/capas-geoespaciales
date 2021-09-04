@@ -14,8 +14,7 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <th>Clasificación 1</th>
     <th>Clasificación 2</th>
     <th>Id Campo</th>
-    <th>Campo Id en fuente</th>
-    <th>Campo descripción en fuente</th>
+    <th>Campo Id/Descripción en fuente</th>
   </tr>
   <tr>
     <td>provincias</td>
@@ -23,7 +22,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>territorial</td>
     <td>administrativa</td>
     <td>cl10020</td>
-    <td>valor</td>
     <td>valor</td>
   </tr>
   <tr>
@@ -33,7 +31,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>administrativa</td>
     <td>cl10021</td>
     <td>valor</td>
-    <td>valor</td>
   </tr>
   <tr>
     <td>distritos</td>
@@ -41,7 +38,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>territorial</td>
     <td>administrativa</td>
     <td>cl10022</td>
-    <td>valor</td>
     <td>valor</td>
   </tr>
   <tr>
@@ -51,7 +47,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>conservacion</td>
     <td>cl10023</td>
     <td>valor</td>
-    <td>valor</td>
   </tr>
    <tr>
     <td>areas_silvestres_protegidas</td>     
@@ -59,7 +54,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>territorial</td>
     <td>conservacion</td>
     <td>cl10024</td>
-    <td>valor</td>
     <td>valor</td>
   </tr>
   <tr>
@@ -69,7 +63,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>conservacion</td>
     <td>cl10025</td>
     <td>valor</td>
-    <td>valor</td>
   </tr>
   <tr>
     <td>cuencas_hidrograficas</td>
@@ -77,7 +70,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>territorial</td>
     <td>hidrografica</td>
     <td>cl10026</td>
-    <td>valor</td>
     <td>valor</td>
   </tr>
   <tr>
@@ -87,7 +79,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>vegetacion</td>
     <td>cl10027</td>
     <td>valor</td>
-    <td>valor</td>
   </tr>
   <tr>
     <td>regiones_climaticas</td>    
@@ -95,7 +86,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>territorial</td>
     <td>bioclimatica</td>
     <td>cl10028</td>
-    <td>valor</td>
     <td>valor</td>
   </tr>
   <tr>
@@ -105,7 +95,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>temperatura</td>
     <td>cl10029</td>
     <td>valor</td>
-    <td>valor</td>
   </tr>
   <tr>
     <td>temperatura_maxima_1960_2013</td>
@@ -113,7 +102,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>bioclimatica</td>
     <td>temperatura</td>
     <td>cl10030</td>
-    <td>valor</td>
     <td>valor</td>
   </tr>
   <tr>
@@ -123,7 +111,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>temperatura</td>
     <td>cl10031</td>
     <td>valor</td>
-    <td>valor</td>
   </tr>
   <tr>
     <td>precipitacion_anual_1960_2013</td>    
@@ -131,7 +118,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>bioclimatica</td>
     <td>precipitacion</td>
     <td>cl10032</td>
-    <td>valor</td>
     <td>valor</td>
   </tr>
   <tr>
@@ -141,7 +127,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>evapotranspiracion</td>
     <td>cl10033</td>
     <td>valor</td>
-    <td>valor</td>
   </tr>
   <tr>
     <td>brillo_solar_2004</td>
@@ -149,7 +134,6 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>bioclimatica</td>
     <td>brillo_solar</td>
     <td>cl10034</td>
-    <td>valor</td>
     <td>valor</td>
   </tr>    
 <table>
