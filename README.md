@@ -185,10 +185,11 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
 <table>
 
 ### Ambientales (raster)
+Todas las capas provienen de archivos GeoTIFF (.tif) con los mismos nombres de las capas.
+
 <table>
   <tr>
     <th>Nombre</th>
-    <th>Archivo fuente</th>
     <th>Id</th>      
     <th>Clasificación 1</th>
     <th>Clasificación 2</th>
@@ -196,7 +197,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>bio01_temperatura_media_anual_1970_2000</td>
-    <td>bio01_temperatura_media_anual_1970_2000.tif</td>
     <td>10035</td>
     <td>bioclimatica</td>
     <td>temperatura</td>
@@ -204,7 +204,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>bio02_rango_medio_diurno_temperatura_1970_2000</td>
-    <td>bio02_rango_medio_diurno_temperatura_1970_2000.tif</td>
     <td>10036</td>
     <td>bioclimatica</td>
     <td>temperatura</td>
