@@ -184,7 +184,7 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>    
 <table>
 
-### Contextuales (vectoriales)
+### Ambientales (raster)
 <table>
   <tr>
     <th>Nombre</th>
@@ -198,15 +198,15 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
     <th>Source description</th>
   </tr>
   <tr>
-    <td>brillo_solar_2004</td>
-    <td>brillo_solar_2004.shp</td>
-    <td>10034</td>
-    <td>bioclimatica</td>
-    <td>brillo_solar</td>
-    <td>brillo_solar_2004</td>
-    <td>cl10034</td>
-    <td>valor</td>
-    <td>valor</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>    
 <table>
 
@@ -234,9 +234,11 @@ $ conda deactivate
 ```
 
 ## Descarga de capas geoespaciales
+  
+### Contextuales (vectoriales)
 
 ```shell
-# Se utiliza el ambiente conda creado como se muestra en la siguiente sección
+# Se utiliza el ambiente conda.
 $ conda activate biodatacr
 
 
@@ -443,3 +445,26 @@ $ zip -m brillo_solar_2004.zip brillo_solar_2004.*
 # Desactivación del ambiente conda
 $ conda deactivate
 ```  
+  
+### Ambientales (raster)
+
+```shell
+# Se utiliza el ambiente conda.
+$ conda activate biodatacr
+  
+
+#
+# WorldClim
+#
+
+# Descarga y descompresión
+$ wget https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_30s_bio.zip
+$ unzip -l wc2.1_30s_bio.zip
+$ unzip wc2.1_30s_bio.zip wc2.1_30s_bio_1.tif
+$ unzip wc2.1_30s_bio.zip wc2.1_30s_bio_12.tif
+
+
+
+# Desactivación del ambiente conda
+$ conda deactivate
+```
