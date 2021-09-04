@@ -146,6 +146,22 @@ $ ogr2ogr \
 $ zip -m zonas_vida_holdridge.zip zonas_vida_holdridge.*
 
 
+#
+# Clima
+#
+
+# Regiones climáticas
+$ rm regiones_climaticas.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(REGION,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, geom FROM \"IMN:reg_climaticas_imn\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    regiones_climaticas.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:reg_climaticas_imn"
+$ zip -m regiones_climaticas.zip regiones_climaticas.*
+
+
 # Desactivación del ambiente conda
 $ conda deactivate
 ```  
@@ -251,5 +267,16 @@ $ conda deactivate
     <td>cl10027</td>
     <td>valor</td>
     <td>valor</td>
-  </tr>    
+  </tr>
+  <tr>
+    <td>regiones_climaticas.shp</td>
+    <td>regiones_climaticas</td>
+    <td>10028</td>
+    <td>territorial</td>
+    <td>bioclimatica</td>
+    <td>regiones_climaticas</td>
+    <td>cl10028</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>
 <table>
