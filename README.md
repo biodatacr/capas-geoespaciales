@@ -29,7 +29,7 @@ $ conda activate biodatacr
 
 
 #
-# División territorial administrativa (IGN)
+# División territorial administrativa
 #
 
 # Provincias
@@ -77,7 +77,7 @@ $ zip -m distritos.zip distritos.*
 
 
 #
-# División territorial de conservación (Sinac)
+# División territorial de conservación
 #
 
 # Áreas de conservación
@@ -112,6 +112,38 @@ $ ogr2ogr \
     corredores_biologicos.shp \
     WFS:"http://geos1pne.sirefor.go.cr/wfs" "PNE:corredoresbiologicos"
 $ zip -m corredores_biologicos.zip corredores_biologicos.*
+
+
+#
+# División territorial hidrográfica
+#
+
+# Cuencas hidrográficas
+$ rm cuencas_hidrograficas.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(nombre,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, the_geom FROM \"CENIGA:cuencas_hidrograficas_50k\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    cuencas_hidrograficas.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/CENIGA/wfs" "CENIGA:cuencas_hidrograficas_50k"
+$ zip -m cuencas_hidrograficas.zip cuencas_hidrograficas.*
+
+
+#
+# Zonas de vida de Holdridge
+#
+
+# Zonas de vida de Holdridge
+$ rm zonas_vida_holdridge.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(nombre,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, geom FROM \"CENIGA:zonas_de_vida_08\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    zonas_vida_holdridge.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/CENIGA/wfs" "CENIGA:zonas_de_vida_08"
+$ zip -m zonas_vida_holdridge.zip zonas_vida_holdridge.*
 
 
 # Desactivación del ambiente conda
@@ -176,14 +208,47 @@ $ conda deactivate
     <td>valor</td>
     <td>valor</td>
   </tr>
-  <tr>
-    <td>corredores_biologicos.shp</td>
-    <td>corredores_biologicos</td>
+   <tr>
+    <td>areas_silvestres_protegidas.shp</td>
+    <td>areas_silvestres_protegidas</td>
     <td>10024</td>
     <td>territorial</td>
     <td>conservacion</td>
-    <td>corredores_biologicos</td>
+    <td>areas_silvestres_protegidas</td>
     <td>cl10024</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>
+  <tr>
+    <td>corredores_biologicos.shp</td>
+    <td>corredores_biologicos</td>
+    <td>10025</td>
+    <td>territorial</td>
+    <td>conservacion</td>
+    <td>corredores_biologicos</td>
+    <td>cl10025</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>
+  <tr>
+    <td>cuencas_hidrograficas.shp</td>
+    <td>cuencas_hidrograficas</td>
+    <td>10026</td>
+    <td>territorial</td>
+    <td>hidrografica</td>
+    <td>cuencas_hidrograficas</td>
+    <td>cl10026</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>
+  <tr>
+    <td>zonas_vida_holdridge.shp</td>
+    <td>zonas_vida_holdridge</td>
+    <td>10027</td>
+    <td>bioclimatica</td>
+    <td>vegetacion</td>
+    <td>zonas_vida_holdridge</td>
+    <td>cl10027</td>
     <td>valor</td>
     <td>valor</td>
   </tr>    
