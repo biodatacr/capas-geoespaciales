@@ -163,6 +163,20 @@ Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con l
     <td>temperatura</td>
     <td>el10036</td>
   </tr>
+  <tr>
+    <td>bio03_isotermalidad_1970_2000</td>
+    <td>10037</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>el10037</td>
+  </tr>
+  <tr>
+    <td>bio04_estacionalidad_temperatura_1970_2000</td>
+    <td>10038</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>el10038</td>
+  </tr>
 <table>
 
 ## Creación de ambiente Conda
