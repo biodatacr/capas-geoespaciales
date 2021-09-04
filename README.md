@@ -438,6 +438,26 @@ $ gdalwarp \
     -crop_to_cutline wc2.1_30s_bio_2.tif \
     bio02_rango_medio_diurno_temperatura_1970_2000.bil
 $ zip -m bio02_rango_medio_diurno_temperatura_1970_2000.zip bio02_rango_medio_diurno_temperatura_1970_2000.*
+  
+# BIO03 Isotermalidad
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_3.tif \
+    bio03_isotermalidad_1970_2000.bil
+$ zip -m bio03_isotermalidad_1970_2000.zip bio03_isotermalidad_1970_2000.*
+  
+# BIO04 Estacionalidad de temperatura
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_4.tif \
+    bio04_estacionalidad_temperatura_1970_2000.bil
+$ zip -m bio04_estacionalidad_temperatura_1970_2000.zip bio04_estacionalidad_temperatura_1970_2000.*
 
   
 # Desactivación del ambiente conda
