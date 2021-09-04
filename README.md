@@ -198,6 +198,13 @@ Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con l
     <td>temperatura</td>
     <td>el10041</td>
   </tr>
+  <tr>
+    <td>bio08_temperatura_media_trimestre_lluviosisimo_1970_2000</td>
+    <td>10042</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>el10042</td>
+  </tr>
 <table>
 
 ## Creación de ambiente Conda
@@ -524,7 +531,17 @@ $ gdalwarp \
     bio07_rango_anual_temperatura_1970_2000.bil
 $ zip -m bio07_rango_anual_temperatura_1970_2000.zip bio07_rango_anual_temperatura_1970_2000.*
 
+# BIO08 Temperatura media del trimestre más lluvioso
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_8.tif \
+    bio08_temperatura_media_trimestre_lluviosisimo_1970_2000.bil
+$ zip -m bio08_temperatura_media_trimestre_lluviosisimo_1970_2000.zip bio08_temperatura_media_trimestre_lluviosisimo_1970_2000.*
 
+  
 # Desactivación del ambiente conda
 $ conda deactivate
 ```
