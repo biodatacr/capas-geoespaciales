@@ -5,10 +5,11 @@ Este repositorio contiene las capas del [Portal Geoespacial de BIODATACR]() y lo
 Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificación empleada en el portal.
 
 ### Contextuales (vectoriales)
+Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con los mismos nombres de las capas.
+
 <table>
   <tr>
     <th>Nombre</th>
-    <th>Archivo fuente</th>
     <th>Id</th>      
     <th>Clasificación 1</th>
     <th>Clasificación 2</th>
@@ -19,7 +20,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>provincias</td>
-    <td>provincias.shp</td>
     <td>10020</td>      
     <td>territorial</td>
     <td>administrativa</td>
@@ -30,7 +30,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>cantones</td>    
-    <td>cantones.shp</td>
     <td>10021</td>      
     <td>territorial</td>
     <td>administrativa</td>
@@ -41,7 +40,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>distritos</td>
-    <td>distritos.shp</td>
     <td>10022</td>      
     <td>territorial</td>
     <td>administrativa</td>
@@ -52,7 +50,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>areas_conservacion</td>
-    <td>areas_conservacion.shp</td>
     <td>10023</td>      
     <td>territorial</td>
     <td>conservacion</td>
@@ -63,7 +60,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
    <tr>
     <td>areas_silvestres_protegidas</td>     
-    <td>areas_silvestres_protegidas.shp</td>
     <td>10024</td>
     <td>territorial</td>
     <td>conservacion</td>
@@ -74,7 +70,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>corredores_biologicos</td>    
-    <td>corredores_biologicos.shp</td>
     <td>10025</td>
     <td>territorial</td>
     <td>conservacion</td>
@@ -85,7 +80,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>cuencas_hidrograficas</td>
-    <td>cuencas_hidrograficas.shp</td>
     <td>10026</td>
     <td>territorial</td>
     <td>hidrografica</td>
@@ -96,7 +90,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>zonas_vida_holdridge</td>    
-    <td>zonas_vida_holdridge.shp</td>
     <td>10027</td>
     <td>bioclimatica</td>
     <td>vegetacion</td>
@@ -107,7 +100,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>regiones_climaticas</td>    
-    <td>regiones_climaticas.shp</td>
     <td>10028</td>
     <td>territorial</td>
     <td>bioclimatica</td>
@@ -118,7 +110,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>temperatura_media_1960_2013</td>    
-    <td>temperatura_media_1960_2013.shp</td>
     <td>10029</td>
     <td>bioclimatica</td>
     <td>temperatura</td>
@@ -129,7 +120,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>temperatura_maxima_1960_2013</td>
-    <td>temperatura_maxima_1960_2013.shp</td>
     <td>10030</td>
     <td>bioclimatica</td>
     <td>temperatura</td>
@@ -140,7 +130,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>temperatura_minima_1960_2013</td>
-    <td>temperatura_minima_1960_2013.shp</td>
     <td>10031</td>
     <td>bioclimatica</td>
     <td>temperatura</td>
@@ -151,7 +140,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>precipitacion_anual_1960_2013</td>    
-    <td>precipitacion_anual_1960_2013.shp</td>
     <td>10032</td>
     <td>bioclimatica</td>
     <td>precipitacion</td>
@@ -162,7 +150,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>evapotranspiracion_media_2004</td>    
-    <td>evapotranspiracion_media_2004.shp</td>
     <td>10033</td>
     <td>bioclimatica</td>
     <td>evapotranspiracion</td>
@@ -173,7 +160,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
   </tr>
   <tr>
     <td>brillo_solar_2004</td>
-    <td>brillo_solar_2004.shp</td>
     <td>10034</td>
     <td>bioclimatica</td>
     <td>brillo_solar</td>
@@ -185,7 +171,7 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
 <table>
 
 ### Ambientales (raster)
-Todas las capas provienen de archivos GeoTIFF (.tif) con los mismos nombres de las capas.
+Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con los mismos nombres de las capas.
 
 <table>
   <tr>
