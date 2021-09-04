@@ -2,7 +2,9 @@
 Este repositorio contiene las capas del [Portal Geoespacial de BIODATACR]() y los procedimientos empleados para obtenerlas.
 
 ## Lista de capas
+Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificación empleada en el portal.
 
+### Contextuales (vectoriales)
 <table>
   <tr>
     <th>Nombre</th>
@@ -168,6 +170,32 @@ Este repositorio contiene las capas del [Portal Geoespacial de BIODATACR]() y lo
     <td>cl10033</td>
     <td>valor</td>
     <td>valor</td>
+  </tr>
+  <tr>
+    <td>brillo_solar_2004</td>
+    <td>brillo_solar_2004.shp</td>
+    <td>10034</td>
+    <td>bioclimatica</td>
+    <td>brillo_solar</td>
+    <td>brillo_solar_2004</td>
+    <td>cl10034</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>    
+<table>
+
+### Contextuales (vectoriales)
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Archivo fuente</th>
+    <th>Id</th>      
+    <th>Clasificación 1</th>
+    <th>Clasificación 2</th>
+    <th>Nombre Campo</th>
+    <th>Id Campo</th>
+    <th>Source Id</th>
+    <th>Source description</th>
   </tr>
   <tr>
     <td>brillo_solar_2004</td>
