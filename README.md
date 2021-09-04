@@ -194,6 +194,39 @@ $ ogr2ogr \
     WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:Tem_max_CR_60_13"
 $ zip -m temperatura_maxima_1960_2013.zip temperatura_maxima_1960_2013.*
 
+# Precipitación anual 1960-2013
+$ rm precipitacion_anual_1960_2013.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(RANGO_PREC,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, geom FROM \"IMN:anual_pre_60_13\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    precipitacion_anual_1960_2013.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:anual_pre_60_13"
+$ zip -m precipitacion_anual_1960_2013.zip precipitacion_anual_1960_2013.*
+
+# Evapotranspiración media 2004
+$ rm evapotranspiracion_media_2004.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(POLIGONO,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, geom FROM \"IMN:Evapotranspiración_Media_Anual_Costa_Rica_2004\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    evapotranspiracion_media_2004.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:Evapotranspiración_Media_Anual_Costa_Rica_2004"
+$ zip -m evapotranspiracion_media_2004.zip evapotranspiracion_media_2004.*
+
+# Brillo solar 2004
+$ rm brillo_solar_2004.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(VALOR_1,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, geom FROM \"IMN:brillo_solar_anual_2004\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    brillo_solar_2004.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:brillo_solar_anual_2004"
+$ zip -m brillo_solar_2004.zip brillo_solar_2004.*
+
 
 # Desactivación del ambiente conda
 $ conda deactivate
@@ -345,4 +378,37 @@ $ conda deactivate
     <td>valor</td>
     <td>valor</td>
   </tr>
+  <tr>
+    <td>precipitacion_anual_1960_2013.shp</td>
+    <td>precipitacion_anual_1960_2013</td>
+    <td>10032</td>
+    <td>bioclimatica</td>
+    <td>precipitacion</td>
+    <td>precipitacion_anual_1960_2013</td>
+    <td>cl10032</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>
+  <tr>
+    <td>evapotranspiracion_media_2004.shp</td>
+    <td>evapotranspiracion_media_2004</td>
+    <td>10033</td>
+    <td>bioclimatica</td>
+    <td>evapotranspiracion</td>
+    <td>evapotranspiracion_media_2004</td>
+    <td>cl10033</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>
+  <tr>
+    <td>brillo_solar_2004.shp</td>
+    <td>brillo_solar_2004</td>
+    <td>10034</td>
+    <td>bioclimatica</td>
+    <td>brillo_solar</td>
+    <td>brillo_solar_2004</td>
+    <td>cl10034</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>    
 <table>
