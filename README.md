@@ -161,6 +161,17 @@ $ ogr2ogr \
     WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:reg_climaticas_imn"
 $ zip -m regiones_climaticas.zip regiones_climaticas.*
 
+# Temperatura media 1960-2013
+$ rm temperatura_media_1960_2013.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(RANGO_TEMP,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, geom FROM \"IMN:Tem_media_CR_60_13\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    temperatura_media_1960_2013.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:Tem_media_CR_60_13"
+$ zip -m temperatura_media_1960_2013.zip temperatura_media_1960_2013.*
+
 
 # Desactivación del ambiente conda
 $ conda deactivate
@@ -276,6 +287,17 @@ $ conda deactivate
     <td>bioclimatica</td>
     <td>regiones_climaticas</td>
     <td>cl10028</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>
+  <tr>
+    <td>temperatura_media_1960_2013.shp</td>
+    <td>temperatura_media_1960_2013</td>
+    <td>10029</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>temperatura_media_1960_2013</td>
+    <td>cl10029</td>
     <td>valor</td>
     <td>valor</td>
   </tr>
