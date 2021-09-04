@@ -212,6 +212,13 @@ Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con l
     <td>temperatura</td>
     <td>el10043</td>
   </tr>
+  <tr>
+    <td>bio10_temperatura_media_trimestre_calientisimo_1970_2000</td>
+    <td>10044</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>el10044</td>
+  </tr>
 <table>
 
 ## Creación de ambiente Conda
@@ -557,6 +564,16 @@ $ gdalwarp \
     -crop_to_cutline wc2.1_30s_bio_9.tif \
     bio09_temperatura_media_trimestre_sequisimo_1970_2000.bil
 $ zip -m bio09_temperatura_media_trimestre_sequisimo_1970_2000.zip bio09_temperatura_media_trimestre_sequisimo_1970_2000.*
+  
+# BIO10 Temperatura media del trimestre más caliente
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_10.tif \
+    bio10_temperatura_media_trimestre_calientisimo_1970_2000.bil
+$ zip -m bio10_temperatura_media_trimestre_calientisimo_1970_2000.zip bio10_temperatura_media_trimestre_calientisimo_1970_2000.*
 
 
 # Desactivación del ambiente conda
