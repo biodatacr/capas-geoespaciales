@@ -44,6 +44,41 @@ $ ogr2ogr \
 $ zip -m provincias.zip provincias.*
 
 
+# Cantones
+$ rm cantones.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(canton,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, SHAPE FROM \"IGN_5:limitecantonal_5k\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    cantones.shp \
+    WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitecantonal_5k"
+$ zip -m cantones.zip cantones.*
+
+
+# Cantones 2 (se usó este método porque estaba fallando la capa en el SNIT. El archivo cantones.geojson se obtuvo a partir de una versión descargada previamente)
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(canton,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, geometry FROM cantones" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    cantones.shp \
+    cantones.geojson
+$ rm cantones.geojson
+$ zip -m cantones.zip cantones.*
+
+
+# Distritos
+$ rm distritos.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(distrito,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, SHAPE FROM \"IGN_5:limitedistrital_5k\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    distritos.shp \
+    WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitedistrital_5k"
+$ zip -m distritos.zip distritos.*
+
 # Desactivación del ambiente conda
 $ conda deactivate
 ```  
@@ -73,4 +108,26 @@ $ conda deactivate
     <td>valor</td>
     <td>valor</td>
   </tr>
+  <tr>
+    <td>cantones.shp</td>
+    <td>cantones</td>
+    <td>10021</td>      
+    <td>territorial</td>
+    <td>administrativa</td>
+    <td>cantones</td>
+    <td>cl10021</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>
+  <tr>
+    <td>distritos.shp</td>
+    <td>distritos</td>
+    <td>10022</td>      
+    <td>territorial</td>
+    <td>administrativa</td>
+    <td>distritos</td>
+    <td>cl10022</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>    
 <table>
