@@ -177,6 +177,13 @@ Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con l
     <td>temperatura</td>
     <td>el10038</td>
   </tr>
+  <tr>
+    <td>bio05_temperatura_maxima_mes_calientisimo_1970_2000</td>
+    <td>10039</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>el10039</td>
+  </tr>  
 <table>
 
 ## Creación de ambiente Conda
@@ -472,6 +479,16 @@ $ gdalwarp \
     -crop_to_cutline wc2.1_30s_bio_4.tif \
     bio04_estacionalidad_temperatura_1970_2000.bil
 $ zip -m bio04_estacionalidad_temperatura_1970_2000.zip bio04_estacionalidad_temperatura_1970_2000.*
+
+# BIO05 Temperatura máxima del mes más caliente
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_5.tif \
+    bio05_temperatura_maxima_mes_calientisimo_1970_2000.bil
+$ zip -m bio05_temperatura_maxima_mes_calientisimo_1970_2000.zip bio05_temperatura_maxima_mes_calientisimo_1970_2000.*
 
   
 # Desactivación del ambiente conda
