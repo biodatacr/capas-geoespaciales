@@ -29,7 +29,7 @@ $ conda activate biodatacr
 
 
 #
-# División territorial administrativa
+# División territorial administrativa (IGN)
 #
 
 # Provincias
@@ -74,6 +74,44 @@ $ ogr2ogr \
     distritos.shp \
     WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitedistrital_5k"
 $ zip -m distritos.zip distritos.*
+
+
+#
+# División territorial de conservación (Sinac)
+#
+
+# Áreas de conservación
+$ rm areas_conservacion.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(nombre_ac,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, SHAPE FROM \"PNE:areas_conservacion\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    areas_conservacion.shp \
+    WFS:"http://geos1pne.sirefor.go.cr/wfs" "PNE:areas_conservacion"
+$ zip -m areas_conservacion.zip areas_conservacion.*
+
+# Áreas silvestres protegidas
+$ rm areas_silvestres_protegidas.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(nombre_asp,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, SHAPE FROM \"PNE:areas_silvestres_protegidas\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    areas_silvestres_protegidas.shp \
+    WFS:"http://geos1pne.sirefor.go.cr/wfs" "PNE:areas_silvestres_protegidas"
+$ zip -m areas_silvestres_protegidas.zip areas_silvestres_protegidas.*
+
+# Corredores biológicos
+$ rm corredores_biologicos.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(nombre_cb,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, SHAPE FROM \"PNE:corredoresbiologicos\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    corredores_biologicos.shp \
+    WFS:"http://geos1pne.sirefor.go.cr/wfs" "PNE:corredoresbiologicos"
+$ zip -m corredores_biologicos.zip corredores_biologicos.*
 
 
 # Desactivación del ambiente conda
@@ -124,6 +162,28 @@ $ conda deactivate
     <td>administrativa</td>
     <td>distritos</td>
     <td>cl10022</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>
+  <tr>
+    <td>areas_conservacion.shp</td>
+    <td>areas_conservacion</td>
+    <td>10023</td>      
+    <td>territorial</td>
+    <td>conservacion</td>
+    <td>areas_conservacion</td>
+    <td>cl10023</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>
+  <tr>
+    <td>corredores_biologicos.shp</td>
+    <td>corredores_biologicos</td>
+    <td>10024</td>
+    <td>territorial</td>
+    <td>conservacion</td>
+    <td>corredores_biologicos</td>
+    <td>cl10024</td>
     <td>valor</td>
     <td>valor</td>
   </tr>    
