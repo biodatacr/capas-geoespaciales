@@ -192,7 +192,6 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
     <th>Id</th>      
     <th>Clasificación 1</th>
     <th>Clasificación 2</th>
-    <th>Nombre Campo</th>
     <th>Id Campo</th>
   </tr>
   <tr>
@@ -201,9 +200,16 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
     <td>10035</td>
     <td>bioclimatica</td>
     <td>temperatura</td>
-    <td>bio01_temperatura_media_anual_1970_2000</td>
     <td>el10035</td>
-  </tr>    
+  </tr>
+  <tr>
+    <td>bio02_rango_medio_diurno_temperatura_1970_2000</td>
+    <td>bio02_rango_medio_diurno_temperatura_1970_2000.tif</td>
+    <td>10036</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>el10036</td>
+  </tr>
 <table>
 
 ## Creación de ambiente Conda
@@ -469,6 +475,16 @@ $ gdalwarp \
     -crop_to_cutline wc2.1_30s_bio_1.tif \
     bio01_temperatura_media_anual_1970_2000.bil
 $ zip -m bio01_temperatura_media_anual_1970_2000.zip bio01_temperatura_media_anual_1970_2000.*
+  
+# BIO02 Rango medio diurno de temperatura
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_2.tif \
+    bio02_rango_medio_diurno_temperatura_1970_2000.bil
+$ zip -m bio02_rango_medio_diurno_temperatura_1970_2000.zip bio02_rango_medio_diurno_temperatura_1970_2000.*
 
   
 # Desactivación del ambiente conda
