@@ -172,6 +172,28 @@ $ ogr2ogr \
     WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:Tem_media_CR_60_13"
 $ zip -m temperatura_media_1960_2013.zip temperatura_media_1960_2013.*
 
+# Temperatura mínima 1960-2013
+$ rm temperatura_minima_1960_2013.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(RANGO_TEMP,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, geom FROM \"IMN:Tem_min_CR_60_13\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    temperatura_minima_1960_2013.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:Tem_min_CR_60_13"
+$ zip -m temperatura_minima_1960_2013.zip temperatura_minima_1960_2013.*
+
+# Temperatura máxima 1960-2013
+$ rm temperatura_maxima_1960_2013.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(RANGO_TEMP,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, geom FROM \"IMN:Tem_max_CR_60_13\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    temperatura_maxima_1960_2013.shp \
+    WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:Tem_max_CR_60_13"
+$ zip -m temperatura_maxima_1960_2013.zip temperatura_maxima_1960_2013.*
+
 
 # Desactivación del ambiente conda
 $ conda deactivate
@@ -298,6 +320,28 @@ $ conda deactivate
     <td>temperatura</td>
     <td>temperatura_media_1960_2013</td>
     <td>cl10029</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>
+  <tr>
+    <td>temperatura_maxima_1960_2013.shp</td>
+    <td>temperatura_maxima_1960_2013</td>
+    <td>10030</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>temperatura_maxima_1960_2013</td>
+    <td>cl10030</td>
+    <td>valor</td>
+    <td>valor</td>
+  </tr>
+  <tr>
+    <td>temperatura_minima_1960_2013.shp</td>
+    <td>temperatura_minima_1960_2013</td>
+    <td>10031</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>temperatura_minima_1960_2013</td>
+    <td>cl10031</td>
     <td>valor</td>
     <td>valor</td>
   </tr>
