@@ -14,8 +14,8 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
     <th>Clasificación 2</th>
     <th>Nombre Campo</th>
     <th>Id Campo</th>
-    <th>Source Id</th>
-    <th>Source description</th>
+    <th>Campo Id en fuente</th>
+    <th>Campo descripción en fuente</th>
   </tr>
   <tr>
     <td>provincias</td>
@@ -194,19 +194,15 @@ Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificac
     <th>Clasificación 2</th>
     <th>Nombre Campo</th>
     <th>Id Campo</th>
-    <th>Source Id</th>
-    <th>Source description</th>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>bio01_temperatura_media_anual_1970_2000</td>
+    <td>bio01_temperatura_media_anual_1970_2000.tif</td>
+    <td>10035</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>bio01_temperatura_media_anual_1970_2000</td>
+    <td>el10035</td>
   </tr>    
 <table>
 
@@ -457,14 +453,24 @@ $ conda activate biodatacr
 # WorldClim
 #
 
-# Descarga y descompresión
+# Descarga y descompresión del archivo con las 19 variables de Bioclim (https://www.worldclim.org/data/bioclim.html)
 $ wget https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_30s_bio.zip
-$ unzip -l wc2.1_30s_bio.zip
-$ unzip wc2.1_30s_bio.zip wc2.1_30s_bio_1.tif
-$ unzip wc2.1_30s_bio.zip wc2.1_30s_bio_12.tif
+$ unzip wc2.1_30s_bio.zip
+  
+  
+# Para los siguientes comandos, el archivo provincias.shp puede tomarse de las capas contextuales de la sección anterior.
+  
+# BIO01 Temperatura media anual
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_1.tif \
+    bio01_temperatura_media_anual_1970_2000.bil
+$ zip -m bio01_temperatura_media_anual_1970_2000.zip bio01_temperatura_media_anual_1970_2000.*
 
-
-
+  
 # Desactivación del ambiente conda
 $ conda deactivate
 ```
