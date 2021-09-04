@@ -205,6 +205,13 @@ Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con l
     <td>temperatura</td>
     <td>el10042</td>
   </tr>
+  <tr>
+    <td>bio09_temperatura_media_trimestre_sequisimo_1970_2000</td>
+    <td>10043</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>el10043</td>
+  </tr>
 <table>
 
 ## Creación de ambiente Conda
@@ -541,7 +548,17 @@ $ gdalwarp \
     bio08_temperatura_media_trimestre_lluviosisimo_1970_2000.bil
 $ zip -m bio08_temperatura_media_trimestre_lluviosisimo_1970_2000.zip bio08_temperatura_media_trimestre_lluviosisimo_1970_2000.*
 
-  
+# BIO09 Temperatura media del trimestre más seco
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_9.tif \
+    bio09_temperatura_media_trimestre_sequisimo_1970_2000.bil
+$ zip -m bio09_temperatura_media_trimestre_sequisimo_1970_2000.zip bio09_temperatura_media_trimestre_sequisimo_1970_2000.*
+
+
 # Desactivación del ambiente conda
 $ conda deactivate
 ```
