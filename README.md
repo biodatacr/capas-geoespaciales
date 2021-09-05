@@ -226,6 +226,13 @@ Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con l
     <td>temperatura</td>
     <td>el10045</td>
   </tr>
+  <tr>
+    <td>bio12_precipitacion_anual_1970_2000</td>
+    <td>10046</td>
+    <td>bioclimatica</td>
+    <td>precipitacion</td>
+    <td>el10046</td>
+  </tr>
 <table>
 
 ## Creación de ambiente Conda
@@ -591,6 +598,16 @@ $ gdalwarp \
     -crop_to_cutline wc2.1_30s_bio_11.tif \
     bio11_temperatura_media_trimestre_friisimo_1970_2000.bil
 $ zip -m bio11_temperatura_media_trimestre_friisimo_1970_2000.zip bio11_temperatura_media_trimestre_friisimo_1970_2000.*
+
+# BIO12 Precipitación anual
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_12.tif \
+    bio12_precipitacion_anual_1970_2000.bil
+$ zip -m bio12_precipitacion_anual_1970_2000.zip bio12_precipitacion_anual_1970_2000.*
 
 
 # Desactivación del ambiente conda
