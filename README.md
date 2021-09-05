@@ -219,6 +219,13 @@ Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con l
     <td>temperatura</td>
     <td>el10044</td>
   </tr>
+  <tr>
+    <td>bio11_temperatura_media_trimestre_friisimo_1970_2000</td>
+    <td>10045</td>
+    <td>bioclimatica</td>
+    <td>temperatura</td>
+    <td>el10045</td>
+  </tr>
 <table>
 
 ## Creación de ambiente Conda
@@ -515,7 +522,7 @@ $ gdalwarp \
     bio04_estacionalidad_temperatura_1970_2000.bil
 $ zip -m bio04_estacionalidad_temperatura_1970_2000.zip bio04_estacionalidad_temperatura_1970_2000.*
 
-# BIO05 Temperatura máxima del mes más caliente
+# BIO05 Temperatura máxima del mes más cálido
 $ gdalwarp \
     -dstnodata -9999 \
     -tr 0.008333333333333 0.008333333333333 \
@@ -565,7 +572,7 @@ $ gdalwarp \
     bio09_temperatura_media_trimestre_sequisimo_1970_2000.bil
 $ zip -m bio09_temperatura_media_trimestre_sequisimo_1970_2000.zip bio09_temperatura_media_trimestre_sequisimo_1970_2000.*
   
-# BIO10 Temperatura media del trimestre más caliente
+# BIO10 Temperatura media del trimestre más cálido
 $ gdalwarp \
     -dstnodata -9999 \
     -tr 0.008333333333333 0.008333333333333 \
@@ -574,6 +581,16 @@ $ gdalwarp \
     -crop_to_cutline wc2.1_30s_bio_10.tif \
     bio10_temperatura_media_trimestre_calientisimo_1970_2000.bil
 $ zip -m bio10_temperatura_media_trimestre_calientisimo_1970_2000.zip bio10_temperatura_media_trimestre_calientisimo_1970_2000.*
+
+# BIO11 Temperatura media del trimestre más frío
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_11.tif \
+    bio11_temperatura_media_trimestre_friisimo_1970_2000.bil
+$ zip -m bio11_temperatura_media_trimestre_friisimo_1970_2000.zip bio11_temperatura_media_trimestre_friisimo_1970_2000.*
 
 
 # Desactivación del ambiente conda
