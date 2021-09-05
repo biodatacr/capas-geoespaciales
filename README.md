@@ -639,7 +639,7 @@ $ gdalwarp \
     -tr 0.008333333333333 0.008333333333333 \
     -q \
     -cutline provincias.shp \
-    -crop_to_cutline wc2.1_30s_bio_13.tif \
+    -crop_to_cutline wc2.1_30s_bio_14.tif \
     bio14_precipitacion_mes_sequisimo_1970_2000.bil
 $ zip -m bio14_precipitacion_mes_sequisimo_1970_2000.zip bio14_precipitacion_mes_sequisimo_1970_2000.*
 
