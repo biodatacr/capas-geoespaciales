@@ -275,6 +275,13 @@ Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con l
     <td>precipitacion</td>
     <td>el10052</td>
   </tr>
+  <tr>
+    <td>bio19_precipitacion_trimestre_friisimo_1970_2000</td>
+    <td>10053</td>
+    <td>bioclimatica</td>
+    <td>precipitacion</td>
+    <td>el10053</td>
+  </tr>
 <table>
 
 ## Creación de ambiente Conda
@@ -711,6 +718,16 @@ $ gdalwarp \
     bio18_precipitacion_trimestre_calientisimo_1970_2000.bil
 $ zip -m bio18_precipitacion_trimestre_calientisimo_1970_2000.zip bio18_precipitacion_trimestre_calientisimo_1970_2000.*
   
+# BIO19 Precipitación del trimestre más frío
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_19.tif \
+    bio19_precipitacion_trimestre_friisimo_1970_2000.bil
+$ zip -m bio19_precipitacion_trimestre_friisimo_1970_2000.zip bio19_precipitacion_trimestre_friisimo_1970_2000.*
+
 
 # Desactivación del ambiente conda
 $ conda deactivate
