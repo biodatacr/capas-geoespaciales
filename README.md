@@ -254,6 +254,13 @@ Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con l
     <td>precipitacion</td>
     <td>el10049</td>
   </tr>
+  <tr>
+    <td>bio16_precipitacion_trimestre_lluviosisimo_1970_2000</td>
+    <td>10050</td>
+    <td>bioclimatica</td>
+    <td>precipitacion</td>
+    <td>el10050</td>
+  </tr>
 <table>
 
 ## Creación de ambiente Conda
@@ -659,6 +666,16 @@ $ gdalwarp \
     -crop_to_cutline wc2.1_30s_bio_15.tif \
     bio15_estacionalidad_precipitacion_1970_2000.bil
 $ zip -m bio15_estacionalidad_precipitacion_1970_2000.zip bio15_estacionalidad_precipitacion_1970_2000.*
+
+# BIO16 Precipitación del trimestre más lluvioso
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_16.tif \
+    bio16_precipitacion_trimestre_lluviosisimo_1970_2000.bil
+$ zip -m bio16_precipitacion_trimestre_lluviosisimo_1970_2000.zip bio16_precipitacion_trimestre_lluviosisimo_1970_2000.*
 
 
 # Desactivación del ambiente conda
