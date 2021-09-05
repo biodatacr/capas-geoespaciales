@@ -240,6 +240,13 @@ Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con l
     <td>precipitacion</td>
     <td>el10047</td>
   </tr>
+  <tr>
+    <td>bio14_precipitacion_mes_sequisimo_1970_2000</td>
+    <td>10048</td>
+    <td>bioclimatica</td>
+    <td>precipitacion</td>
+    <td>el10048</td>
+  </tr>
 <table>
 
 ## Creación de ambiente Conda
@@ -625,6 +632,16 @@ $ gdalwarp \
     -crop_to_cutline wc2.1_30s_bio_13.tif \
     bio13_precipitacion_mes_lluviosisimo_1970_2000.bil
 $ zip -m bio13_precipitacion_mes_lluviosisimo_1970_2000.zip bio13_precipitacion_mes_lluviosisimo_1970_2000.*
+
+# BIO14 Precipitación del mes más seco
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_bio_13.tif \
+    bio14_precipitacion_mes_sequisimo_1970_2000.bil
+$ zip -m bio14_precipitacion_mes_sequisimo_1970_2000.zip bio14_precipitacion_mes_sequisimo_1970_2000.*
 
 
 # Desactivación del ambiente conda
