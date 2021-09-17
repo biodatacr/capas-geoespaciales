@@ -282,6 +282,13 @@ Todas las capas provienen de archivos GeoTIFF (.tif) comprimidos (en .zip) con l
     <td>precipitacion</td>
     <td>el10053</td>
   </tr>
+  <tr>
+    <td>altitud</td>
+    <td>10054</td>
+    <td>altitud</td>
+    <td>altitud</td>
+    <td>el10054</td>
+  </tr>
 <table>
 
 ## Creación de ambiente Conda
