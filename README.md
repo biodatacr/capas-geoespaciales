@@ -542,6 +542,9 @@ $ conda activate biodatacr
 $ wget https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_30s_bio.zip
 $ unzip wc2.1_30s_bio.zip
   
+# Descarga y descompresión del archivo con datos de altitud (https://www.worldclim.org/data/bioclim.html)
+$ wget https://biogeo.ucdavis.edu/data/worldclim/v2.1/base/wc2.1_30s_elev.zip
+$ unzip wc2.1_30s_elev.zip
   
 # Para los siguientes comandos, el archivo provincias.shp puede tomarse de las capas contextuales de la sección anterior.
   
@@ -734,6 +737,16 @@ $ gdalwarp \
     -crop_to_cutline wc2.1_30s_bio_19.tif \
     bio19_precipitacion_trimestre_friisimo_1970_2000.bil
 $ zip -m bio19_precipitacion_trimestre_friisimo_1970_2000.zip bio19_precipitacion_trimestre_friisimo_1970_2000.*
+
+# Altitud
+$ gdalwarp \
+    -dstnodata -9999 \
+    -tr 0.008333333333333 0.008333333333333 \
+    -q \
+    -cutline provincias.shp \
+    -crop_to_cutline wc2.1_30s_elev.tif \
+    altitud.bil
+$ zip -m altitud.zip altitud.*
 
 
 # Desactivación del ambiente conda
