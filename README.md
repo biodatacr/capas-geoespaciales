@@ -135,7 +135,15 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>brillo_solar</td>
     <td>cl10034</td>
     <td>valor</td>
-  </tr>    
+  </tr>
+  <tr>
+    <td>humedales</td>
+    <td>10055</td>
+    <td>territorial</td>
+    <td>humedales</td>
+    <td>cl10055</td>
+    <td>valor</td>
+  </tr>
 <table>
 
 ### Ambientales (raster)
@@ -521,6 +529,22 @@ $ ogr2ogr \
     brillo_solar_2004.shp \
     WFS:"http://18.218.14.134:8080/geoserver/IMN/wfs" "IMN:brillo_solar_anual_2004"
 $ zip -m brillo_solar_2004.zip brillo_solar_2004.*
+
+
+#
+# Humedales
+#
+
+# Humedales
+$ rm humedales.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(nom_hum,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, SHAPE FROM \"PNE:registro_nacional_humedales\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    humedales.shp \
+    WFS:"http://geos1pne.sirefor.go.cr/wfs" "PNE:registro_nacional_humedales"
+$ zip -m humedales.zip humedales.*
 
 
 # Desactivación del ambiente conda
