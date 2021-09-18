@@ -377,6 +377,21 @@ $ ogr2ogr \
     distritos.shp \
     WFS:"http://geos.snitcr.go.cr/be/IGN_5/wfs" "IGN_5:limitedistrital_5k"
 $ zip -m distritos.zip distritos.*
+  
+  
+#
+# División territorial indígena
+#
+
+# Territorios indígenas (el archivo fuente proviene del Atlas digital de Costa Rica 2014)
+$ rm territorios_indigenas.*
+$ ogr2ogr \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    territorios_indigenas.shp \
+    TerritoriosindigensCostaRicacrtm05.shp
+$ zip -m territorios_indigenas.zip territorios_indigenas.*
 
 
 #
@@ -431,7 +446,7 @@ $ ogr2ogr \
     cuencas_hidrograficas.shp \
     WFS:"http://18.218.14.134:8080/geoserver/CENIGA/wfs" "CENIGA:cuencas_hidrograficas_50k"
 $ zip -m cuencas_hidrograficas.zip cuencas_hidrograficas.*
-  
+
 
 #
 # Humedales
