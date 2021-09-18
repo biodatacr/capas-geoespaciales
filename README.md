@@ -152,6 +152,14 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>cl10056</td>
     <td>valor</td>
   </tr>
+  <tr>
+    <td>unidades_fitogeograficas</td>
+    <td>10057</td>
+    <td>bioclimatica</td>
+    <td>vegetacion</td>
+    <td>cl10057</td>
+    <td>valor</td>
+  </tr>
 <table>
 
 ### Ambientales (raster)
@@ -474,7 +482,7 @@ $ zip -m humedales.zip humedales.*
 
 
 #
-# Zonas de vida de Holdridge
+# Clasificaciones de vegetación
 #
 
 # Zonas de vida de Holdridge
@@ -487,6 +495,17 @@ $ ogr2ogr \
     zonas_vida_holdridge.shp \
     WFS:"http://18.218.14.134:8080/geoserver/CENIGA/wfs" "CENIGA:zonas_de_vida_08"
 $ zip -m zonas_vida_holdridge.zip zonas_vida_holdridge.*
+  
+# Unidades fitogeográficas
+$ rm unidades_fitogeograficas.*
+$ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(DESCRIP,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, geometry FROM \"unidadesfitogeogracrtm05\"" \
+    -lco ENCODING=ISO-8859-1 \
+    -t_srs EPSG:4326 \
+    -makevalid \
+    unidades_fitogeograficas.shp \
+    unidadesfitogeogracrtm05.shp
+$ zip -m unidades_fitogeograficas.zip unidades_fitogeograficas.*
 
 
 #
