@@ -1,5 +1,5 @@
 # Capas geoespaciales
-Este repositorio contiene las capas del [Portal Geoespacial de BIODATACR]() y los procedimientos empleados para obtenerlas.
+Este repositorio contiene las capas del [Portal Geoespacial de BIODATACR](http://geoespacial.biodiversidad.go.cr/) y los procedimientos empleados para obtenerlas.
 
 ## Lista de capas
 Las capas se dividen en contextuales y ambientales, de acuerdo con la clasificación empleada en el portal.
