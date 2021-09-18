@@ -394,6 +394,7 @@ $ zip -m distritos.zip distritos.*
 # Territorios indígenas (el archivo fuente proviene del Atlas digital de Costa Rica 2014)
 $ rm territorios_indigenas.*
 $ ogr2ogr \
+    -dialect sqlite -sql "SELECT replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(replace(NOMBRE,'Ñ','N'),'Ú','U'),'Ó','O'),'Í','I'),'É','E'),'Á','A'),'ñ','n'),'ú','u'),'ó','o'),'í','i'),'é','e'),'á','a') AS valor, geometry FROM \"TerritoriosindigensCostaRicacrtm05\"" \
     -lco ENCODING=ISO-8859-1 \
     -t_srs EPSG:4326 \
     -makevalid \
