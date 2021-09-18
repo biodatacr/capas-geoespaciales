@@ -144,6 +144,14 @@ Todas las capas provienen de archivos Shapefile (.shp) comprimidos (en .zip) con
     <td>cl10055</td>
     <td>valor</td>
   </tr>
+  <tr>
+    <td>territorios_indigenas</td>
+    <td>10056</td>
+    <td>territorial</td>
+    <td>indigena</td>
+    <td>cl10056</td>
+    <td>valor</td>
+  </tr>
 <table>
 
 ### Ambientales (raster)
